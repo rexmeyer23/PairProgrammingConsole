@@ -8,9 +8,12 @@ namespace PairProgrammingConsoleAssignment
 {
     class Locations
     {
+        public List<string> Exits { get; }
+        public string Filler { get;  }
 
-        public Locations(string filler)
+        public Locations(string filler, List<string> exits )
         {
+            Exits = exits;
         }
     }
 }

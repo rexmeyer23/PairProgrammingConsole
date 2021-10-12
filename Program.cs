@@ -14,6 +14,8 @@ namespace PairProgrammingConsoleAssignment
             game.Title();
             game.LevelOne();
             game.LevelTwo();
+            game.LevelThree(); 
+            game.LevelFour(); 
         }
     }
 }
