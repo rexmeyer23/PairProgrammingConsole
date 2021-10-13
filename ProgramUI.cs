@@ -14,6 +14,21 @@ namespace PairProgrammingConsoleAssignment
         //main menu
         public void Title()
         {
+            Console.WriteLine("####    ####    ####\n" +
+                         "####    ####    ####\n" +
+                      "#####################\n" +
+                      "##################### \n" +
+                      "#####################\n" +
+                      "#####################\n" +
+                      "#####    #####    ###\n" +
+                      "#####    #####    ### \n" +
+                      "#####################\n" +
+                      "#####################\n" +
+                      "#####################\n" +
+                      "#########     #######\n" +
+                      "#########     #######\n" +
+                      "#########     #######\n" +
+                      "#########     #######");
             Console.WriteLine("Welcome to The Dark Castle.\n" + "You will be going on a journey where you will be tested on your ability to slay the Fire Breathing Dragon.\n" + "But fear not, the journey may be tough, but you'll ultimately feel rewarded in the end.\n" +
                 "Press any key to continue..");
             Console.ReadLine();
@@ -37,6 +52,7 @@ namespace PairProgrammingConsoleAssignment
                 if (input == "YES")
                 {
                     Console.WriteLine("You now have the Gold KEY.");
+                    Console.WriteLine("M*****<3");
                     Console.ReadLine();
                     Console.Clear();
                     break;
@@ -55,7 +71,6 @@ namespace PairProgrammingConsoleAssignment
         }
         public void LevelTwo()
         {
-
             bool bedroomOrDiningRoom = true;
             while (bedroomOrDiningRoom)
             {
@@ -64,12 +79,40 @@ namespace PairProgrammingConsoleAssignment
                 string input2 = Console.ReadLine().ToUpper();
                 if (input2 == "BEDROOM")
                 {
-                    Console.WriteLine("You are in what looks to be a bedroom.\n" + "The bed is unmade, and the night stand has an abstract painting of what vaguely appears to be a dragon.\n");
-                    Console.WriteLine("Above the headboard is a clear glass case holding the ALMIGHTY SWORD.\n"); 
-                    Console.WriteLine ("Congratulations! You now have the ALMIGHTY SWORD and may exit the BEDROOM. \n" + "Press any key to exit the room....");
-                    supplies.Add(Item.sword);
-                    Console.ReadKey();
-                    Console.Clear();
+                    bool inBedroom = true;
+                    while (inBedroom)
+                    {
+                        Console.WriteLine("You are in what looks to be a bedroom.\n" + "The bed is unmade, and the night stand has an abstract painting of what vaguely appears to be a dragon.\n");
+                        Console.WriteLine("Above the headboard is a clear glass case holding the ALMIGHTY SWORD.\n");
+                        Console.ReadLine();
+                        Console.Clear();
+                        Console.WriteLine("Do you take the sword? \n" + "Enter: YES or NO");
+                        string input3 = Console.ReadLine().ToUpper();
+                        if (input3 == "YES")
+                        {
+                            supplies.Add(Item.sword);
+                            Console.WriteLine("You have obtained the ALMIGHTY SWORD!");
+                            Console.WriteLine("<<<<<<|xxxxx|");
+
+                            Console.ReadLine();
+                            Console.Clear();
+                            break;
+                        }
+                        else if (input3 == "NO")
+                        {
+                            Console.WriteLine("You refuse to pick up the sword... So you just admire it from afar. \n" + "Press Enter to continue");
+                            Console.ReadLine();
+                            Console.Clear();
+                        }
+                        else
+                        {
+                            Console.WriteLine("Please Enter YES or NO");
+                        }
+                        Console.Clear();
+                    }
+                    Console.WriteLine("Now that you have claimed the ALMIGHTY SWORD, there is nothing else in here. \n" + "Press Enter to exit the bedroom...");
+                    Console.ReadLine();
+
                 }
                 else if (input2 == "DINING ROOM")
                 {
@@ -113,6 +156,9 @@ namespace PairProgrammingConsoleAssignment
                         {
                             supplies.Add(Item.shield);
                             Console.WriteLine("You now have obtained the SHIELD. \n" + "Press any key to continue....");
+                            Console.WriteLine("_____");
+                            Console.WriteLine(") * (");
+                            Console.WriteLine("(___)");
 
                             Console.ReadLine();
                             Console.Clear();
@@ -151,7 +197,8 @@ namespace PairProgrammingConsoleAssignment
                 else
                 {
                     Console.WriteLine("Please enter one of the three options:\n" +
-                        " OFFICE, MAIN ENTRANCE, or COURTYARD");
+                        " OFFICE, MAIN ENTRANCE, or COURTYARD\n" +
+                        "Press any key to continue...");
                 }
             }
         }
