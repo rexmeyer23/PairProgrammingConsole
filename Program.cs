@@ -8,6 +8,7 @@ namespace PairProgrammingConsoleAssignment
 {
     class Program
     {
+        public static Hero currentPlayer = new Hero();
         static void Main(string[] args)
         {
             ProgramUI game = new ProgramUI();

@@ -9,6 +9,7 @@ namespace PairProgrammingConsoleAssignment
     class ProgramUI
     {
         //items needed to win the game
+        //public static Hero currentPlayer = new Hero();
         public enum Item { sword, shield };
         public List<Item> supplies = new List<Item>();
         //list of rooms
@@ -182,7 +183,7 @@ namespace PairProgrammingConsoleAssignment
             Console.ReadKey();
             if (supplies.Contains(Item.sword) && supplies.Contains(Item.shield))
             {
-                Console.WriteLine("You won!");
+                Battle.DragonBattle();
             }
             else
             {
